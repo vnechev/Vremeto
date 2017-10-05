@@ -11,6 +11,10 @@
 		317BBB981F838D2400A4CD89 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317BBB971F838D2400A4CD89 /* ViewController.swift */; };
 		317BBB9A1F838D2400A4CD89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 317BBB991F838D2400A4CD89 /* Assets.xcassets */; };
 		317BBB9D1F838D2400A4CD89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 317BBB9B1F838D2400A4CD89 /* Main.storyboard */; };
+		317BBBA71F83E0B800A4CD89 /* ForecastItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317BBBA51F83E0B800A4CD89 /* ForecastItem.swift */; };
+		317BBBA81F83E0B800A4CD89 /* ForecastItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 317BBBA61F83E0B800A4CD89 /* ForecastItem.xib */; };
+		317BBBAF1F83F05600A4CD89 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317BBBAE1F83F05600A4CD89 /* Constants.swift */; };
+		87DDF5C5390866F90B1A174A /* Pods_Vremeto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB0D3E77AF2088D0F8358BFD /* Pods_Vremeto.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +25,12 @@
 		317BBB9C1F838D2400A4CD89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		317BBB9E1F838D2400A4CD89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		317BBB9F1F838D2400A4CD89 /* Vremeto.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Vremeto.entitlements; sourceTree = "<group>"; };
+		317BBBA51F83E0B800A4CD89 /* ForecastItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastItem.swift; sourceTree = "<group>"; };
+		317BBBA61F83E0B800A4CD89 /* ForecastItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForecastItem.xib; sourceTree = "<group>"; };
+		317BBBAE1F83F05600A4CD89 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		593ACA7226C992D43DA030D5 /* Pods-Vremeto.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vremeto.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Vremeto/Pods-Vremeto.debug.xcconfig"; sourceTree = "<group>"; };
+		AB0D3E77AF2088D0F8358BFD /* Pods_Vremeto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vremeto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4F327B05696993773A7E25D /* Pods-Vremeto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vremeto.release.xcconfig"; path = "Pods/Target Support Files/Pods-Vremeto/Pods-Vremeto.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,17 +38,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87DDF5C5390866F90B1A174A /* Pods_Vremeto.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		13ACDB957877BD1D371212DC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				593ACA7226C992D43DA030D5 /* Pods-Vremeto.debug.xcconfig */,
+				F4F327B05696993773A7E25D /* Pods-Vremeto.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		317BBB891F838D2400A4CD89 = {
 			isa = PBXGroup;
 			children = (
 				317BBB941F838D2400A4CD89 /* Vremeto */,
 				317BBB931F838D2400A4CD89 /* Products */,
+				13ACDB957877BD1D371212DC /* Pods */,
+				7082DBF6B68EFADFA99917B2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -53,14 +75,49 @@
 		317BBB941F838D2400A4CD89 /* Vremeto */ = {
 			isa = PBXGroup;
 			children = (
+				317BBBAD1F83F03E00A4CD89 /* Utilities */,
+				317BBBAA1F83EEDE00A4CD89 /* Model */,
+				317BBBA91F83EEC200A4CD89 /* Controllers */,
 				317BBB951F838D2400A4CD89 /* AppDelegate.swift */,
-				317BBB971F838D2400A4CD89 /* ViewController.swift */,
 				317BBB991F838D2400A4CD89 /* Assets.xcassets */,
 				317BBB9B1F838D2400A4CD89 /* Main.storyboard */,
 				317BBB9E1F838D2400A4CD89 /* Info.plist */,
 				317BBB9F1F838D2400A4CD89 /* Vremeto.entitlements */,
+				317BBBA61F83E0B800A4CD89 /* ForecastItem.xib */,
 			);
 			path = Vremeto;
+			sourceTree = "<group>";
+		};
+		317BBBA91F83EEC200A4CD89 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				317BBB971F838D2400A4CD89 /* ViewController.swift */,
+				317BBBA51F83E0B800A4CD89 /* ForecastItem.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		317BBBAA1F83EEDE00A4CD89 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		317BBBAD1F83F03E00A4CD89 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				317BBBAE1F83F05600A4CD89 /* Constants.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		7082DBF6B68EFADFA99917B2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AB0D3E77AF2088D0F8358BFD /* Pods_Vremeto.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -70,9 +127,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 317BBBA21F838D2400A4CD89 /* Build configuration list for PBXNativeTarget "Vremeto" */;
 			buildPhases = (
+				0117FF874232AE43441540AD /* [CP] Check Pods Manifest.lock */,
 				317BBB8E1F838D2400A4CD89 /* Sources */,
 				317BBB8F1F838D2400A4CD89 /* Frameworks */,
 				317BBB901F838D2400A4CD89 /* Resources */,
+				4C16CEF4CDA0C2354383CA65 /* [CP] Embed Pods Frameworks */,
+				EA8CADC4F459FB633E881C14 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -122,6 +182,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				317BBBA81F83E0B800A4CD89 /* ForecastItem.xib in Resources */,
 				317BBB9A1F838D2400A4CD89 /* Assets.xcassets in Resources */,
 				317BBB9D1F838D2400A4CD89 /* Main.storyboard in Resources */,
 			);
@@ -129,12 +190,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0117FF874232AE43441540AD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4C16CEF4CDA0C2354383CA65 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Vremeto/Pods-Vremeto-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA8CADC4F459FB633E881C14 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Vremeto/Pods-Vremeto-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		317BBB8E1F838D2400A4CD89 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				317BBBAF1F83F05600A4CD89 /* Constants.swift in Sources */,
 				317BBB981F838D2400A4CD89 /* ViewController.swift in Sources */,
+				317BBBA71F83E0B800A4CD89 /* ForecastItem.swift in Sources */,
 				317BBB961F838D2400A4CD89 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,9 +372,11 @@
 		};
 		317BBBA31F838D2400A4CD89 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 593ACA7226C992D43DA030D5 /* Pods-Vremeto.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Vremeto/Vremeto.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 2CA3L22BJ9;
@@ -271,15 +384,18 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gmail-vnechev.Vremeto";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
 		317BBBA41F838D2400A4CD89 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4F327B05696993773A7E25D /* Pods-Vremeto.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Vremeto/Vremeto.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 2CA3L22BJ9;
@@ -287,6 +403,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gmail-vnechev.Vremeto";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
