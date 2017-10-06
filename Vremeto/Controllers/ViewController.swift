@@ -8,6 +8,7 @@
 
 import Cocoa
 import SwiftSky
+import CoreLocation
 
 class ViewController: NSViewController {
    
@@ -25,6 +26,10 @@ class ViewController: NSViewController {
     @IBOutlet weak var uvIndexLbl: NSTextField!
     @IBOutlet weak var dateLbl: NSTextField!
     
+    @IBOutlet weak var currentLocationName: NSTextField!
+    @IBOutlet weak var streetNameLbl: NSTextField!
+    
+    var geocoder = CLGeocoder()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,10 +40,29 @@ class ViewController: NSViewController {
         getForecast { }
         
     }
-   
+
+    
     override func viewDidAppear() {
         NotificationCenter.default.addObserver(self, selector: #selector (ViewController.dataDownloadedNotif(notif: )), name: NOTIF_DOWNLOAD_COMPLETE, object: nil)
-        
+        let currentLocation = CLLocation(latitude: location.latitude, longitude: location.longitude)
+        geocoder.reverseGeocodeLocation(currentLocation) { (placemakers, error) in
+            self.geoName(withPlacemakers: placemakers, error: error)
+        }
+    }
+    
+    @objc func geoName(withPlacemakers placemarks: [CLPlacemark]?, error: Error?){
+        if let error = error {
+            print("Unable to Reverse Geocode Location (\(error))")
+            currentLocationName.stringValue = "N/A"
+            
+        } else {
+            if let placemarks = placemarks, let placemark = placemarks.first {
+                currentLocationName.stringValue = placemark.locality!
+                streetNameLbl.stringValue = placemark.thoroughfare!
+            } else {
+                currentLocationName.stringValue = "N/A"
+            }
+        }
     }
     
     @objc func dataDownloadedNotif(notif: Notification)  {
@@ -146,5 +170,30 @@ extension ViewController: NSCollectionViewDelegate, NSCollectionViewDataSource, 
         return NSSize(width: 125, height: 125)
     }
     
+    
+}
+extension CLPlacemark {
+    
+    var compactAddress: String? {
+        if let name = name {
+            var result = name
+            
+//            if let street = thoroughfare {
+//                result += ", \(street)"
+//            }
+            
+            if let city = locality {
+                result += ", \(city)"
+            }
+            
+//            if let country = country {
+//                result += ", \(country)"
+//            }
+//
+            return result
+        }
+        
+        return nil
+    }
     
 }
