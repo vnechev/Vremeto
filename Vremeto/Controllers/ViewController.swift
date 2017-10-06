@@ -42,9 +42,10 @@ class ViewController: NSViewController {
     }
     
     @objc func dataDownloadedNotif(notif: Notification)  {
+        
+        AppDelegate.downloadWeatherData()
         getCurrentData { }
         getForecast { }
-        AppDelegate.downloadWeatherData()
     }
     
     override func viewDidDisappear() {
@@ -62,9 +63,10 @@ class ViewController: NSViewController {
     }
     
     @IBAction func reloadDataClicked(_ sender: Any) {
+        AppDelegate.downloadWeatherData()
         getCurrentData { }
         getForecast { }
-        AppDelegate.downloadWeatherData()
+        
     }
     
     

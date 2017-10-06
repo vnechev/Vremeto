@@ -8,22 +8,39 @@
 
 import Cocoa
 import SwiftSky
+import CoreLocation
 
 @NSApplicationMain
-class AppDelegate: NSObject, NSApplicationDelegate {
+class AppDelegate: NSObject, NSApplicationDelegate, CLLocationManagerDelegate {
 
  static let stausItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
+    let locationManager = CLLocationManager()
+    var currentLocation: CLLocation!
+    
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.startMonitoringSignificantLocationChanges()
+        locationManager.distanceFilter = 1000
+        locationManager.startUpdatingLocation()
+        
         AppDelegate.stausItem.button?.title = "--°"
         AppDelegate.stausItem.action = #selector(AppDelegate.popUpDisplay(_:))
         let updateTimer = Timer.scheduledTimer(timeInterval: 15 * 60, target: self, selector: #selector(AppDelegate.downloadWeatherData), userInfo: nil, repeats: true)
         updateTimer.tolerance = 60
+//        AppDelegate.downloadWeatherData()
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        currentLocation = locations[locations.count - 1]
+        SetLocation.instance.latitude = currentLocation.coordinate.latitude
+        SetLocation.instance.longitude = currentLocation.coordinate.longitude
         AppDelegate.downloadWeatherData()
     }
     
     @objc static func downloadWeatherData(){
-       
+     
         SwiftSky.secret = API_KEY
         SwiftSky.units.temperature = .celsius
         SwiftSky.units.speed = .meterPerSecond
@@ -34,9 +51,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             AppDelegate.stausItem.button?.title = (result.response?.current?.temperature?.current?.label ?? "__°")
             
             NotificationCenter.default.post(name: NOTIF_DOWNLOAD_COMPLETE, object: nil)
+         
         }
+        
     }
 
+  
+    
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
