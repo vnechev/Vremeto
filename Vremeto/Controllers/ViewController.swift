@@ -44,7 +44,7 @@ class ViewController: NSViewController {
     
     override func viewDidAppear() {
         NotificationCenter.default.addObserver(self, selector: #selector (ViewController.dataDownloadedNotif(notif: )), name: NOTIF_DOWNLOAD_COMPLETE, object: nil)
-        let currentLocation = CLLocation(latitude: location.latitude, longitude: location.longitude)
+        let currentLocation = CLLocation(latitude: SetLocation.instance.latitude, longitude: SetLocation.instance.longitude)
         geocoder.reverseGeocodeLocation(currentLocation) { (placemakers, error) in
             self.geoName(withPlacemakers: placemakers, error: error)
         }
@@ -86,7 +86,7 @@ class ViewController: NSViewController {
         NSApplication.shared.terminate(nil)
     }
     
-    @IBAction func reloadDataClicked(_ sender: Any) {
+   @IBAction func reloadDataClicked(_ sender: Any) {
         AppDelegate.downloadWeatherData()
         getCurrentData { }
         getForecast { }
@@ -102,7 +102,7 @@ class ViewController: NSViewController {
         SwiftSky.units.pressure = .hectopascal
         SwiftSky.language = .bulgarian
         
-        SwiftSky.get([.current, .days], at: location) { (result) in
+        SwiftSky.get([.current, .days, .hours], at: location) { (result) in
             self.currentTempLbl.stringValue = (result.response?.current?.temperature?.current?.label ?? "N/A")
             self.currenWeatherSummaryLbl.stringValue = (result.response?.current?.summary ?? "N/A")
             self.currentWeatherImg.image = NSImage(imageLiteralResourceName: "\(result.response?.current?.icon ?? "clear-day")")
@@ -119,7 +119,8 @@ class ViewController: NSViewController {
             dateFormater.dateFormat = "EEEE - dd.MM.yyyy"
             let currentDate = dateFormater.string(from: (result.response?.days?.points[0].time) ?? Date())
             self.dateLbl.stringValue = currentDate.capitalized
-            
+//          let test = result.response?.hours?.points[16].precipitation?.probability?.label
+//            print(test!)
         }
         
         complete()
@@ -172,28 +173,4 @@ extension ViewController: NSCollectionViewDelegate, NSCollectionViewDataSource, 
     
     
 }
-extension CLPlacemark {
-    
-    var compactAddress: String? {
-        if let name = name {
-            var result = name
-            
-//            if let street = thoroughfare {
-//                result += ", \(street)"
-//            }
-            
-            if let city = locality {
-                result += ", \(city)"
-            }
-            
-//            if let country = country {
-//                result += ", \(country)"
-//            }
-//
-            return result
-        }
-        
-        return nil
-    }
-    
-}
+

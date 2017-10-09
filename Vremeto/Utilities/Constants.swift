@@ -11,6 +11,6 @@ import SwiftSky
 
 let API_HOMEPAGE = "https://darksky.net/forecast/43.841,25.971/si24/en"
 let API_KEY = "8a1b96fdda7bb2b5bba0038050a2cb06"
-let location =  Location(latitude: SetLocation.instance.latitude, longitude: SetLocation.instance.longitude)
+var location =  Location(latitude: SetLocation.instance.latitude, longitude: SetLocation.instance.longitude)
 typealias DownloadComplete = () -> ()
 let NOTIF_DOWNLOAD_COMPLETE = NSNotification.Name("dataDownloaded")

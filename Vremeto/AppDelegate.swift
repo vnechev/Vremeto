@@ -14,7 +14,7 @@ import CoreLocation
 class AppDelegate: NSObject, NSApplicationDelegate, CLLocationManagerDelegate {
 
  static let stausItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
-    let locationManager = CLLocationManager()
+    let  locationManager = CLLocationManager()
     var currentLocation: CLLocation!
     
 
@@ -34,6 +34,12 @@ class AppDelegate: NSObject, NSApplicationDelegate, CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         currentLocation = locations[locations.count - 1]
+        SetLocation.instance.latitude = currentLocation.coordinate.latitude
+        SetLocation.instance.longitude = currentLocation.coordinate.longitude
+        AppDelegate.downloadWeatherData()
+    }
+    func locationManager(_ manager: CLLocationManager, didUpdateTo newLocation: CLLocation, from oldLocation: CLLocation) {
+        currentLocation = newLocation
         SetLocation.instance.latitude = currentLocation.coordinate.latitude
         SetLocation.instance.longitude = currentLocation.coordinate.longitude
         AppDelegate.downloadWeatherData()
@@ -58,9 +64,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, CLLocationManagerDelegate {
 
   
     
-    func applicationWillTerminate(_ aNotification: Notification) {
-        // Insert code here to tear down your application
-    }
+    
 
     @objc func popUpDisplay(_ sender: AnyObject?){
         let storyboard = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: nil)
