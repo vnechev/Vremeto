@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13196" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13196"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="ForecastItem" customModule="Vremeto" customModuleProvider="target"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="109" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d44-Xe-01z">
+                    <rect key="frame" x="27" y="23" width="55" height="55"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="55" id="5fg-f2-Mt1"/>
+                        <constraint firstAttribute="height" constant="55" id="F50-v3-mGU"/>
+                    </constraints>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="rain" id="d6O-s7-OMq"/>
+                </imageView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="VhH-0Y-6Je">
+                    <rect key="frame" x="9" y="76" width="91" height="24"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Понеделник" id="weL-Lr-S3A">
+                        <font key="font" size="14" name="AvenirNext-Regular"/>
+                        <color key="textColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="MZM-fK-aWo">
+                    <rect key="frame" x="3" y="0.0" width="103" height="19"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="10* / 25*" id="qOk-qG-shl">
+                        <font key="font" size="11" name="AvenirNext-Medium"/>
+                        <color key="textColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstItem="VhH-0Y-6Je" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="11" id="Fca-xX-pGD"/>
+                <constraint firstAttribute="bottom" secondItem="MZM-fK-aWo" secondAttribute="bottom" id="Gff-Eo-AxK"/>
+                <constraint firstItem="d44-Xe-01z" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="HF7-0U-eL1"/>
+                <constraint firstAttribute="trailing" secondItem="MZM-fK-aWo" secondAttribute="trailing" constant="5" id="LmG-ge-goa"/>
+                <constraint firstItem="MZM-fK-aWo" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="5" id="Vaf-r4-hWQ"/>
+                <constraint firstItem="d44-Xe-01z" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="dEe-jd-8gj"/>
+                <constraint firstItem="VhH-0Y-6Je" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="jcA-Fe-Oci"/>
+                <constraint firstItem="MZM-fK-aWo" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="wML-2K-gzK"/>
+                <constraint firstAttribute="trailing" secondItem="VhH-0Y-6Je" secondAttribute="trailing" constant="11" id="yKK-Fz-ayq"/>
+            </constraints>
+        </customView>
+        <viewController id="JF9-bA-ndE" customClass="ForecastItem" customModule="Vremeto" customModuleProvider="target">
+            <connections>
+                <outlet property="dayLbl" destination="VhH-0Y-6Je" id="wmh-Nf-6Jq"/>
+                <outlet property="minMaxLbl" destination="MZM-fK-aWo" id="7iu-nT-g2w"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="DZG-c9-xCk"/>
+                <outlet property="weatherImage" destination="d44-Xe-01z" id="mHe-OT-faF"/>
+            </connections>
+        </viewController>
+    </objects>
+    <resources>
+        <image name="rain" width="128" height="128"/>
+    </resources>
+</document>
