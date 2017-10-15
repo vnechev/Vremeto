@@ -120,8 +120,7 @@ class ViewController: NSViewController {
             dateFormater.dateFormat = "EEEE - dd.MM.yyyy"
             let currentDate = dateFormater.string(from: (result.response?.days?.points[0].time) ?? Date())
             self.dateLbl.stringValue = currentDate.capitalized
-          let test = result.response?.current?.wind?.bearing?.degrees
-        
+//          let test = result.response?.hours?.points[16].precipitation?.probability?.label
 //            print(test!)
         }
         
