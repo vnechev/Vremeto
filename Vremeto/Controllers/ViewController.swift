@@ -25,6 +25,7 @@ class ViewController: NSViewController {
     @IBOutlet weak var dewPointLbl: NSTextField!
     @IBOutlet weak var uvIndexLbl: NSTextField!
     @IBOutlet weak var dateLbl: NSTextField!
+    @IBOutlet weak var arrowImg: NSImageView!
     
     @IBOutlet weak var currentLocationName: NSTextField!
     @IBOutlet weak var streetNameLbl: NSTextField!
@@ -120,8 +121,9 @@ class ViewController: NSViewController {
             dateFormater.dateFormat = "EEEE - dd.MM.yyyy"
             let currentDate = dateFormater.string(from: (result.response?.days?.points[0].time) ?? Date())
             self.dateLbl.stringValue = currentDate.capitalized
-          let test = result.response?.current?.wind?.bearing?.degrees
-        
+            let test = (result.response?.current?.wind?.bearing?.degrees)! + 30
+            
+            self.arrowImg.frameCenterRotation = CGFloat(test)
 //            print(test!)
         }
         
