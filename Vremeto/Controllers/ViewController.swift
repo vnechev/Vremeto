@@ -35,6 +35,7 @@ class ViewController: NSViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        currentWeatherImg.toolTip = "Натиснете за детайлна почасова прогноза."
         self.view.layer?.cornerRadius = 6
         getCurrentData { }
         getForecast { }
@@ -43,7 +44,7 @@ class ViewController: NSViewController {
 
     
     override func viewDidAppear() {
-        NotificationCenter.default.addObserver(self, selector: #selector (ViewController.dataDownloadedNotif(notif: )), name: NOTIF_DOWNLOAD_COMPLETE, object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector (ViewController.dataDownloadedNotif(notif: )), name: NOTIF_DOWNLOAD_COMPLETE, object: nil)
         let currentLocation = CLLocation(latitude: SetLocation.instance.latitude, longitude: SetLocation.instance.longitude)
         geocoder.reverseGeocodeLocation(currentLocation) { (placemakers, error) in
             self.geoName(withPlacemakers: placemakers, error: error)
@@ -73,7 +74,7 @@ class ViewController: NSViewController {
     }
     
     override func viewDidDisappear() {
-        NotificationCenter.default.removeObserver(self, name: NOTIF_DOWNLOAD_COMPLETE, object: nil)
+//        NotificationCenter.default.removeObserver(self, name: NOTIF_DOWNLOAD_COMPLETE, object: nil)
     }
     
     @IBAction func poweredByDarkSkyBtnClicked(_ sender: Any) {

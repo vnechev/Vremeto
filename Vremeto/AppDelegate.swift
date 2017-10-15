@@ -17,7 +17,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, CLLocationManagerDelegate {
     let  locationManager = CLLocationManager()
     var currentLocation: CLLocation!
     
-
+//My comment
+    
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
