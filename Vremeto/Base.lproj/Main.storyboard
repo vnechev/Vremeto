@@ -702,29 +702,29 @@
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="fog" id="qU1-1Q-qi8"/>
                             </imageView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ptg-UI-kwH">
-                                <rect key="frame" x="150" y="416" width="184" height="40"/>
+                                <rect key="frame" x="150" y="427" width="184" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="P8z-04-czH"/>
                                     <constraint firstAttribute="height" constant="40" id="baG-jv-ZHI"/>
                                 </constraints>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Русе" id="w37-5h-eV0">
-                                    <font key="font" size="27" name="ArialMT"/>
+                                    <font key="font" size="24" name="AvenirNext-Regular"/>
                                     <color key="textColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ztw-nj-XYp">
-                                <rect key="frame" x="217" y="215" width="47" height="45"/>
+                                <rect key="frame" x="222" y="227" width="36" height="50"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="--°" id="8t3-WN-xo1">
-                                    <font key="font" size="40" name="Arial-BoldMT"/>
+                                    <font key="font" size="30" name="AvenirNext-Regular"/>
                                     <color key="textColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="RE3-p2-IXl">
-                                <rect key="frame" x="168" y="192" width="49" height="21"/>
+                                <rect key="frame" x="168" y="192" width="50" height="25"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="min --°" id="oAk-Xi-nM4">
-                                    <font key="font" size="15" name="ArialMT"/>
+                                    <font key="font" size="15" name="AvenirNext-Regular"/>
                                     <color key="textColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -784,12 +784,12 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GFZ-V4-rMs">
-                                <rect key="frame" x="132" y="166" width="217" height="25"/>
+                                <rect key="frame" x="131" y="166" width="217" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="Ky3-6x-ECm"/>
                                 </constraints>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Разкъсана облачост с валежи" id="CHl-FJ-73L">
-                                    <font key="font" size="15" name="ArialMT"/>
+                                    <font key="font" size="15" name="AvenirNext-Regular"/>
                                     <color key="textColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -802,15 +802,15 @@
                                     <constraint firstAttribute="height" constant="25" id="haZ-kF-FHP"/>
                                 </constraints>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Понеделник" id="fX9-3M-pfv">
-                                    <font key="font" size="15" name="Arial-ItalicMT"/>
+                                    <font key="font" size="15" name="AvenirNext-Regular"/>
                                     <color key="textColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="DE9-id-NcG">
-                                <rect key="frame" x="254" y="192" width="53" height="21"/>
+                                <rect key="frame" x="255" y="192" width="52" height="25"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="max --°" id="xLo-gA-cM0">
-                                    <font key="font" size="15" name="ArialMT"/>
+                                    <font key="font" size="15" name="AvenirNext-Regular"/>
                                     <color key="textColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -915,11 +915,11 @@
                             <constraint firstAttribute="bottom" secondItem="QgH-lz-M0z" secondAttribute="bottom" constant="2" id="Iip-cj-nl7"/>
                             <constraint firstItem="GFZ-V4-rMs" firstAttribute="centerX" secondItem="Ztw-nj-XYp" secondAttribute="centerX" id="Kkk-uF-Lzj"/>
                             <constraint firstAttribute="trailing" secondItem="Vvm-CQ-GYw" secondAttribute="trailing" id="LIF-Vv-37H"/>
-                            <constraint firstItem="8ml-Xz-Qfc" firstAttribute="top" secondItem="ptg-UI-kwH" secondAttribute="bottom" constant="4" id="PaO-tj-jxc"/>
+                            <constraint firstItem="8ml-Xz-Qfc" firstAttribute="top" secondItem="ptg-UI-kwH" secondAttribute="bottom" constant="15" id="PaO-tj-jxc"/>
                             <constraint firstItem="GFZ-V4-rMs" firstAttribute="top" secondItem="RE3-p2-IXl" secondAttribute="bottom" constant="1" id="ROO-M9-zEA"/>
                             <constraint firstAttribute="bottom" secondItem="864-b3-oh6" secondAttribute="bottom" constant="20" id="T8G-fN-MJ0"/>
                             <constraint firstItem="QgH-lz-M0z" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="Uap-8x-HuK"/>
-                            <constraint firstItem="8ml-Xz-Qfc" firstAttribute="top" secondItem="ptg-UI-kwH" secondAttribute="bottom" constant="4" id="VMk-0E-NVV"/>
+                            <constraint firstItem="8ml-Xz-Qfc" firstAttribute="top" secondItem="ptg-UI-kwH" secondAttribute="bottom" constant="15" id="VMk-0E-NVV"/>
                             <constraint firstAttribute="trailing" secondItem="VwJ-LL-ik9" secondAttribute="trailing" constant="170" id="Vez-H3-hve"/>
                             <constraint firstItem="RE3-p2-IXl" firstAttribute="leading" secondItem="VwJ-LL-ik9" secondAttribute="leading" id="Wac-xl-sNK"/>
                             <constraint firstItem="9jh-vz-IhA" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="WgK-pB-dqP"/>
@@ -928,9 +928,9 @@
                             <constraint firstAttribute="trailing" secondItem="864-b3-oh6" secondAttribute="trailing" id="fbh-nv-Zcr"/>
                             <constraint firstItem="LxT-hb-tlv" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="51" id="hDc-Hc-hff"/>
                             <constraint firstItem="DE9-id-NcG" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="RE3-p2-IXl" secondAttribute="trailing" constant="8" symbolic="YES" id="iTD-qW-c0m"/>
-                            <constraint firstItem="Ztw-nj-XYp" firstAttribute="centerY" secondItem="Vvm-CQ-GYw" secondAttribute="centerY" id="lQr-Lq-Hyg"/>
+                            <constraint firstItem="Ztw-nj-XYp" firstAttribute="centerY" secondItem="Vvm-CQ-GYw" secondAttribute="centerY" constant="-14" id="lQr-Lq-Hyg"/>
                             <constraint firstItem="Vvm-CQ-GYw" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="mVB-42-z3O"/>
-                            <constraint firstItem="ptg-UI-kwH" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="nEY-Bl-iRY"/>
+                            <constraint firstItem="ptg-UI-kwH" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="9" id="nEY-Bl-iRY"/>
                             <constraint firstItem="ptg-UI-kwH" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" constant="2" id="neO-8L-I7c"/>
                             <constraint firstItem="VwJ-LL-ik9" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="80" id="nqi-Z5-YnU"/>
                             <constraint firstItem="864-b3-oh6" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="oA4-YO-Ih3"/>

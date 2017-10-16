@@ -57,7 +57,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, CLLocationManagerDelegate {
         SwiftSky.get([.current], at: location) { (result) in
             AppDelegate.stausItem.button?.title = (result.response?.current?.temperature?.current?.label ?? "__°")
             
-            NotificationCenter.default.post(name: NOTIF_DOWNLOAD_COMPLETE, object: nil)
+//            NotificationCenter.default.post(name: NOTIF_DOWNLOAD_COMPLETE, object: nil)
          
         }
         
