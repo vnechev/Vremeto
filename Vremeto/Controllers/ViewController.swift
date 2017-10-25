@@ -32,17 +32,23 @@ class ViewController: NSViewController {
     
     var geocoder = CLGeocoder()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         currentWeatherImg.toolTip = "Натиснете за детайлна почасова прогноза."
+        let clickGesture = NSClickGestureRecognizer(target: self, action: #selector(imageClicked))
+        currentWeatherImg.addGestureRecognizer(clickGesture)
         self.view.layer?.cornerRadius = 6
         getCurrentData { }
         getForecast { }
         
     }
 
+    @objc func imageClicked(){
+        performSegue(withIdentifier: NSStoryboardSegue.Identifier("showHourly"), sender: self)
+    }
     
     override func viewDidAppear() {
 //        NotificationCenter.default.addObserver(self, selector: #selector (ViewController.dataDownloadedNotif(notif: )), name: NOTIF_DOWNLOAD_COMPLETE, object: nil)
@@ -121,10 +127,11 @@ class ViewController: NSViewController {
             dateFormater.dateFormat = "EEEE - dd.MM.yyyy"
             let currentDate = dateFormater.string(from: (result.response?.days?.points[0].time) ?? Date())
             self.dateLbl.stringValue = currentDate.capitalized
-            let test = (result.response?.current?.wind?.bearing?.degrees)! + 30
             
+            let test = (result.response?.current?.wind?.bearing?.degrees)! 
+            let test1 = result.response?.hours?.points[2].wind?.speed?.label // wind next hour
             self.arrowImg.frameCenterRotation = CGFloat(test)
-//            print(test!)
+            print(test1!)
         }
         
         complete()
@@ -168,7 +175,7 @@ extension ViewController: NSCollectionViewDelegate, NSCollectionViewDataSource, 
     
     
     func numberOfSections(in collectionView: NSCollectionView) -> Int {
-        return 5
+        return 8
     
     }
     func collectionView(_ collectionView: NSCollectionView, layout collectionViewLayout: NSCollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> NSSize {

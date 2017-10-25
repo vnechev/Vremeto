@@ -681,6 +681,88 @@
             </objects>
             <point key="canvasLocation" x="75" y="0.0"/>
         </scene>
+        <!--Window Controller-->
+        <scene sceneID="BAn-Zo-rYE">
+            <objects>
+                <windowController id="MSt-sA-WYq" sceneMemberID="viewController">
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" titlebarAppearsTransparent="YES" titleVisibility="hidden" id="yEL-Re-AHO">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" texturedBackground="YES" fullSizeContentView="YES"/>
+                        <rect key="contentRect" x="245" y="301" width="480" height="500"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <connections>
+                            <outlet property="delegate" destination="MSt-sA-WYq" id="6CV-HR-Qnj"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="nwe-Mt-zEK" kind="relationship" relationship="window.shadowedContentViewController" id="nsd-Zj-WVa"/>
+                    </connections>
+                </windowController>
+                <customObject id="tzG-wh-8jp" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-456" y="461"/>
+        </scene>
+        <!--HourlyVC-->
+        <scene sceneID="aaz-JC-kvy">
+            <objects>
+                <viewController id="nwe-Mt-zEK" customClass="HourlyVC" customModule="Vremeto" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="xoT-wX-mYG">
+                        <rect key="frame" x="0.0" y="0.0" width="580" height="500"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UiR-aN-T91">
+                                <rect key="frame" x="0.0" y="0.0" width="580" height="500"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageAlignment="topLeft" imageScaling="axesIndependently" image="gradient" id="Zfk-Bx-3Tn"/>
+                            </imageView>
+                            <scrollView wantsLayer="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nDg-sy-m8H">
+                                <rect key="frame" x="0.0" y="0.0" width="580" height="440"/>
+                                <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="gad-o0-sNv">
+                                    <rect key="frame" x="0.0" y="0.0" width="580" height="440"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <collectionView id="AaC-qO-OH2">
+                                            <rect key="frame" x="0.0" y="0.0" width="580" height="440"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="reg-K4-Sdo">
+                                                <size key="itemSize" width="50" height="50"/>
+                                            </collectionViewFlowLayout>
+                                            <color key="primaryBackgroundColor" red="0.91020758260000001" green="0.91020758260000001" blue="0.91020758260000001" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <connections>
+                                                <outlet property="dataSource" destination="nwe-Mt-zEK" id="I8P-E9-Wo3"/>
+                                                <outlet property="delegate" destination="nwe-Mt-zEK" id="2u2-zI-byH"/>
+                                            </connections>
+                                        </collectionView>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.91020758260000001" green="0.91020758260000001" blue="0.91020758260000001" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
+                                </clipView>
+                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="Rcd-6g-mo3">
+                                    <rect key="frame" x="-100" y="-100" width="480" height="16"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="PJk-c0-86p">
+                                    <rect key="frame" x="234" y="1" width="15" height="143"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="UiR-aN-T91" secondAttribute="bottom" id="3Xy-kA-JxS"/>
+                            <constraint firstItem="UiR-aN-T91" firstAttribute="leading" secondItem="xoT-wX-mYG" secondAttribute="leading" id="57a-O7-RwX"/>
+                            <constraint firstItem="nDg-sy-m8H" firstAttribute="top" secondItem="xoT-wX-mYG" secondAttribute="top" constant="60" id="A1T-op-GLA"/>
+                            <constraint firstItem="nDg-sy-m8H" firstAttribute="leading" secondItem="xoT-wX-mYG" secondAttribute="leading" id="QQW-wi-6CR"/>
+                            <constraint firstAttribute="trailing" secondItem="UiR-aN-T91" secondAttribute="trailing" id="hRo-YX-oja"/>
+                            <constraint firstAttribute="trailing" secondItem="nDg-sy-m8H" secondAttribute="trailing" id="jD5-De-pOt"/>
+                            <constraint firstItem="UiR-aN-T91" firstAttribute="top" secondItem="xoT-wX-mYG" secondAttribute="top" id="mtP-dc-wAq"/>
+                            <constraint firstAttribute="bottom" secondItem="nDg-sy-m8H" secondAttribute="bottom" id="reB-FD-dY6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="hourlyColectionView" destination="AaC-qO-OH2" id="SEC-7a-63q"/>
+                    </connections>
+                </viewController>
+                <customObject id="Z11-8w-xEb" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-456" y="1074"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
@@ -955,11 +1037,12 @@
                         <outlet property="streetNameLbl" destination="LxT-hb-tlv" id="XiX-7T-IME"/>
                         <outlet property="uvIndexLbl" destination="BvB-29-WTl" id="C2a-wa-xQc"/>
                         <outlet property="windLbl" destination="rwB-BW-3EV" id="2IZ-hL-q4z"/>
+                        <segue destination="MSt-sA-WYq" kind="show" identifier="showHourly" id="WTU-oF-ozs"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="74" y="539"/>
         </scene>
     </scenes>
     <resources>

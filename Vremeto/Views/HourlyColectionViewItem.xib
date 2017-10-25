@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13196" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13196"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="HourlyColectionViewItem" customModule="Vremeto" customModuleProvider="target"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="3lh-Ln-D1e">
+            <rect key="frame" x="0.0" y="0.0" width="580" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NCj-M5-wUD">
+                    <rect key="frame" x="8" y="14" width="54" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="LwW-Wi-WeX"/>
+                        <constraint firstAttribute="width" constant="50" id="nyM-2Y-h2h"/>
+                    </constraints>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Name" id="nd4-d6-oE1">
+                        <font key="font" size="14" name="AvenirNext-Regular"/>
+                        <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="OoC-zI-Sum">
+                    <rect key="frame" x="68" y="14" width="204" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="FEX-rD-kjZ"/>
+                        <constraint firstAttribute="width" constant="200" id="Xje-QL-i2C"/>
+                    </constraints>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Name" id="30J-Fw-vDB">
+                        <font key="font" size="14" name="AvenirNext-Regular"/>
+                        <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xq4-jg-NlL">
+                    <rect key="frame" x="278" y="0.0" width="48" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="4t4-QH-ahj"/>
+                        <constraint firstAttribute="width" constant="48" id="wYZ-Ij-Tl3"/>
+                    </constraints>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="HVC-5i-gIM"/>
+                </imageView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="uZz-Q4-J8R">
+                    <rect key="frame" x="324" y="13" width="40" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="HUs-BE-5nj"/>
+                        <constraint firstAttribute="width" constant="36" id="Npg-Pg-thH"/>
+                    </constraints>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="min --°" id="Mrn-NP-WuQ">
+                        <font key="font" size="15" name="AvenirNext-Regular"/>
+                        <color key="textColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3dN-mb-6aa">
+                    <rect key="frame" x="380" y="12" width="194" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="6b8-zm-Byl"/>
+                        <constraint firstAttribute="width" constant="190" id="VZs-TS-lWW"/>
+                    </constraints>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Вероятност за валежи:" id="avG-1D-wGY">
+                        <font key="font" size="15" name="AvenirNext-Regular"/>
+                        <color key="textColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstItem="xq4-jg-NlL" firstAttribute="centerY" secondItem="OoC-zI-Sum" secondAttribute="centerY" id="21o-BH-0Ls"/>
+                <constraint firstAttribute="trailing" secondItem="3dN-mb-6aa" secondAttribute="trailing" constant="8" id="9wI-7f-Jk4"/>
+                <constraint firstItem="uZz-Q4-J8R" firstAttribute="centerY" secondItem="3lh-Ln-D1e" secondAttribute="centerY" id="Hgl-xk-mCs"/>
+                <constraint firstItem="xq4-jg-NlL" firstAttribute="leading" secondItem="OoC-zI-Sum" secondAttribute="trailing" constant="8" id="N7n-tZ-mgn"/>
+                <constraint firstItem="3dN-mb-6aa" firstAttribute="centerY" secondItem="3lh-Ln-D1e" secondAttribute="centerY" id="PEB-q3-JUT"/>
+                <constraint firstItem="uZz-Q4-J8R" firstAttribute="leading" secondItem="xq4-jg-NlL" secondAttribute="trailing" id="PKY-Ss-bGw"/>
+                <constraint firstItem="NCj-M5-wUD" firstAttribute="leading" secondItem="3lh-Ln-D1e" secondAttribute="leading" constant="10" id="a2c-la-X01"/>
+                <constraint firstItem="OoC-zI-Sum" firstAttribute="leading" secondItem="NCj-M5-wUD" secondAttribute="trailing" constant="10" id="uQL-iv-R1T"/>
+                <constraint firstItem="OoC-zI-Sum" firstAttribute="top" secondItem="3lh-Ln-D1e" secondAttribute="top" constant="15" id="wRy-mG-lPJ"/>
+                <constraint firstItem="NCj-M5-wUD" firstAttribute="centerY" secondItem="3lh-Ln-D1e" secondAttribute="centerY" id="z9i-cr-pp4"/>
+            </constraints>
+            <point key="canvasLocation" x="90" y="0.0"/>
+        </customView>
+        <collectionViewItem id="1it-y2-efR" customClass="HourlyColectionViewItem" customModule="Vremeto" customModuleProvider="target">
+            <connections>
+                <outlet property="dateTimeLbl" destination="NCj-M5-wUD" id="Sin-EJ-7Q7"/>
+                <outlet property="hourlyCurrentTempLbl" destination="uZz-Q4-J8R" id="zTf-cF-GLA"/>
+                <outlet property="hourlyImage" destination="xq4-jg-NlL" id="LyG-85-bPR"/>
+                <outlet property="hourlyRainLbl" destination="3dN-mb-6aa" id="6Oc-FA-HSD"/>
+                <outlet property="sumarryLabel" destination="OoC-zI-Sum" id="Mba-QG-4x6"/>
+                <outlet property="view" destination="3lh-Ln-D1e" id="m2E-1m-PFM"/>
+            </connections>
+        </collectionViewItem>
+        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="inZ-Bb-jQB">
+            <rect key="frame" x="0.0" y="0.0" width="217" height="25"/>
+            <constraints>
+                <constraint firstAttribute="height" constant="25" id="lgY-iz-EGD"/>
+            </constraints>
+            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Разкъсана облачост с валежи" id="cul-xg-RHe">
+                <font key="font" size="15" name="AvenirNext-Regular"/>
+                <color key="textColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
+                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+            </textFieldCell>
+        </textField>
+    </objects>
+</document>

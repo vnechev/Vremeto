@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		314C22231F9F695200D17032 /* HourlyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314C22221F9F695200D17032 /* HourlyVC.swift */; };
+		314C22271F9F828600D17032 /* HourlyColectionViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314C22251F9F828600D17032 /* HourlyColectionViewItem.swift */; };
+		314C22281F9F828600D17032 /* HourlyColectionViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 314C22261F9F828600D17032 /* HourlyColectionViewItem.xib */; };
 		315A01731F86A69500225F6A /* SetLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315A01721F86A69500225F6A /* SetLocation.swift */; };
 		317BBB961F838D2400A4CD89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317BBB951F838D2400A4CD89 /* AppDelegate.swift */; };
 		317BBB981F838D2400A4CD89 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317BBB971F838D2400A4CD89 /* ViewController.swift */; };
@@ -19,6 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		314C22221F9F695200D17032 /* HourlyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyVC.swift; sourceTree = "<group>"; };
+		314C22251F9F828600D17032 /* HourlyColectionViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyColectionViewItem.swift; sourceTree = "<group>"; };
+		314C22261F9F828600D17032 /* HourlyColectionViewItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HourlyColectionViewItem.xib; sourceTree = "<group>"; };
 		315A01721F86A69500225F6A /* SetLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetLocation.swift; sourceTree = "<group>"; };
 		317BBB921F838D2400A4CD89 /* Vremeto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vremeto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		317BBB951F838D2400A4CD89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +62,16 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		314C22241F9F822200D17032 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				317BBBA61F83E0B800A4CD89 /* ForecastItem.xib */,
+				317BBB9B1F838D2400A4CD89 /* Main.storyboard */,
+				314C22261F9F828600D17032 /* HourlyColectionViewItem.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		317BBB891F838D2400A4CD89 = {
 			isa = PBXGroup;
 			children = (
@@ -77,15 +93,14 @@
 		317BBB941F838D2400A4CD89 /* Vremeto */ = {
 			isa = PBXGroup;
 			children = (
+				314C22241F9F822200D17032 /* Views */,
 				317BBBAD1F83F03E00A4CD89 /* Utilities */,
 				317BBBAA1F83EEDE00A4CD89 /* Model */,
 				317BBBA91F83EEC200A4CD89 /* Controllers */,
 				317BBB951F838D2400A4CD89 /* AppDelegate.swift */,
 				317BBB991F838D2400A4CD89 /* Assets.xcassets */,
-				317BBB9B1F838D2400A4CD89 /* Main.storyboard */,
 				317BBB9E1F838D2400A4CD89 /* Info.plist */,
 				317BBB9F1F838D2400A4CD89 /* Vremeto.entitlements */,
-				317BBBA61F83E0B800A4CD89 /* ForecastItem.xib */,
 			);
 			path = Vremeto;
 			sourceTree = "<group>";
@@ -95,6 +110,8 @@
 			children = (
 				317BBB971F838D2400A4CD89 /* ViewController.swift */,
 				317BBBA51F83E0B800A4CD89 /* ForecastItem.swift */,
+				314C22251F9F828600D17032 /* HourlyColectionViewItem.swift */,
+				314C22221F9F695200D17032 /* HourlyVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -186,6 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				317BBBA81F83E0B800A4CD89 /* ForecastItem.xib in Resources */,
+				314C22281F9F828600D17032 /* HourlyColectionViewItem.xib in Resources */,
 				317BBB9A1F838D2400A4CD89 /* Assets.xcassets in Resources */,
 				317BBB9D1F838D2400A4CD89 /* Main.storyboard in Resources */,
 			);
@@ -247,9 +265,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				317BBBAF1F83F05600A4CD89 /* Constants.swift in Sources */,
+				314C22231F9F695200D17032 /* HourlyVC.swift in Sources */,
 				317BBB981F838D2400A4CD89 /* ViewController.swift in Sources */,
 				315A01731F86A69500225F6A /* SetLocation.swift in Sources */,
 				317BBBA71F83E0B800A4CD89 /* ForecastItem.swift in Sources */,
+				314C22271F9F828600D17032 /* HourlyColectionViewItem.swift in Sources */,
 				317BBB961F838D2400A4CD89 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
