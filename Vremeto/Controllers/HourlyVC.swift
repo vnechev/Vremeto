@@ -41,7 +41,7 @@ extension HourlyVC: NSCollectionViewDelegate, NSCollectionViewDataSource, NSColl
     
     
     func numberOfSections(in collectionView: NSCollectionView) -> Int {
-        return 12
+        return 24
         
     }
     func collectionView(_ collectionView: NSCollectionView, layout collectionViewLayout: NSCollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> NSSize {

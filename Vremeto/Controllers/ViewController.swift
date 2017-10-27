@@ -130,7 +130,7 @@ class ViewController: NSViewController {
             
             let test = (result.response?.current?.wind?.bearing?.degrees)! 
             let test1 = result.response?.hours?.points[2].wind?.speed?.label // wind next hour
-            self.arrowImg.frameCenterRotation = CGFloat(test)
+            self.arrowImg.frameCenterRotation = CGFloat(test + 90)
             print(test1!)
         }
         
