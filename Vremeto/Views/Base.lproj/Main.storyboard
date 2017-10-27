@@ -711,7 +711,7 @@
                         <subviews>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UiR-aN-T91">
                                 <rect key="frame" x="0.0" y="0.0" width="580" height="500"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageAlignment="topLeft" imageScaling="axesIndependently" image="gradient" id="Zfk-Bx-3Tn"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageAlignment="topLeft" imageScaling="axesIndependently" image="gradient2" id="Zfk-Bx-3Tn"/>
                             </imageView>
                             <scrollView wantsLayer="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nDg-sy-m8H">
                                 <rect key="frame" x="0.0" y="0.0" width="580" height="440"/>
@@ -768,15 +768,15 @@
             <objects>
                 <viewController storyboardIdentifier="vc" id="XfG-lQ-9wD" customClass="ViewController" customModule="Vremeto" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="476"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="500"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <imageView identifier="vc" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vvm-CQ-GYw" userLabel="backgroundImg">
-                                <rect key="frame" x="0.0" y="0.0" width="480" height="476"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="axesIndependently" image="gradient" id="IhU-mS-vyl"/>
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="500"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="axesIndependently" image="gradient2" id="IhU-mS-vyl"/>
                             </imageView>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VwJ-LL-ik9">
-                                <rect key="frame" x="170" y="256" width="140" height="140"/>
+                                <rect key="frame" x="170" y="280" width="140" height="140"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="140" id="IGo-h3-DOK"/>
                                     <constraint firstAttribute="width" constant="140" id="wdK-CB-S4v"/>
@@ -784,7 +784,7 @@
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="fog" id="qU1-1Q-qi8"/>
                             </imageView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ptg-UI-kwH">
-                                <rect key="frame" x="150" y="427" width="184" height="40"/>
+                                <rect key="frame" x="150" y="451" width="184" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="P8z-04-czH"/>
                                     <constraint firstAttribute="height" constant="40" id="baG-jv-ZHI"/>
@@ -796,7 +796,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ztw-nj-XYp">
-                                <rect key="frame" x="222" y="227" width="36" height="50"/>
+                                <rect key="frame" x="222" y="239" width="36" height="50"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="--°" id="8t3-WN-xo1">
                                     <font key="font" size="30" name="AvenirNext-Regular"/>
                                     <color key="textColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
@@ -812,7 +812,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rwB-BW-3EV">
-                                <rect key="frame" x="7" y="348" width="77" height="21"/>
+                                <rect key="frame" x="7" y="372" width="77" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Вятър:" id="G45-wv-l5b">
                                     <font key="font" size="10" name=".AppleSystemUIFontLightItalic"/>
@@ -821,7 +821,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lpI-xb-KQj">
-                                <rect key="frame" x="7" y="327" width="143" height="13"/>
+                                <rect key="frame" x="7" y="351" width="143" height="13"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Налягане" id="Ioh-0L-LHb">
                                     <font key="font" size="10" name=".AppleSystemUIFontLightItalic"/>
@@ -830,7 +830,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KAw-bz-rix">
-                                <rect key="frame" x="7" y="290" width="145" height="21"/>
+                                <rect key="frame" x="7" y="314" width="145" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Влажност" id="aul-Ua-OfY">
                                     <font key="font" size="10" name=".AppleSystemUIFontLightItalic"/>
@@ -839,7 +839,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rfk-PB-bc8">
-                                <rect key="frame" x="316" y="348" width="158" height="21"/>
+                                <rect key="frame" x="316" y="372" width="158" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Облачност" id="cCQ-Dr-Z8s">
                                     <font key="font" size="10" name=".AppleSystemUIFontLightItalic"/>
@@ -848,7 +848,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TRc-Ln-ZoK">
-                                <rect key="frame" x="325" y="327" width="149" height="13"/>
+                                <rect key="frame" x="325" y="351" width="149" height="13"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Валежи при" id="5Ki-uN-OhZ">
                                     <font key="font" size="10" name=".AppleSystemUIFontLightItalic"/>
@@ -857,7 +857,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BvB-29-WTl">
-                                <rect key="frame" x="323" y="290" width="151" height="21"/>
+                                <rect key="frame" x="323" y="314" width="151" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="UV индекс" id="sYc-ke-yng">
                                     <font key="font" size="10" name=".AppleSystemUIFontLightItalic"/>
@@ -877,7 +877,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8ml-Xz-Qfc">
-                                <rect key="frame" x="129" y="387" width="222" height="25"/>
+                                <rect key="frame" x="129" y="411" width="222" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="DzQ-3Z-m4T"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="218" id="Luw-fw-Z0U"/>
@@ -935,7 +935,7 @@
                                 </scroller>
                             </scrollView>
                             <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f5E-6e-rzI">
-                                <rect key="frame" x="414" y="434" width="39" height="38"/>
+                                <rect key="frame" x="414" y="458" width="39" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="round" bezelStyle="circular" image="NSRefreshTemplate" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="ajG-P9-7ph">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -946,7 +946,7 @@
                                 </connections>
                             </button>
                             <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="May-0k-gbn">
-                                <rect key="frame" x="440" y="434" width="39" height="38"/>
+                                <rect key="frame" x="440" y="458" width="39" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="round" bezelStyle="circular" image="NSStopProgressTemplate" imagePosition="only" alignment="center" state="on" borderStyle="border" focusRingType="none" inset="2" id="S2E-Sr-XMv">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -970,7 +970,7 @@
                                 </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LxT-hb-tlv">
-                                <rect key="frame" x="68" y="412" width="344" height="13"/>
+                                <rect key="frame" x="68" y="436" width="344" height="13"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="340" id="MeH-WE-t1Y"/>
                                     <constraint firstAttribute="height" constant="13" id="niV-W8-ZjS"/>
@@ -982,7 +982,7 @@
                                 </textFieldCell>
                             </textField>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kxM-xc-RM8">
-                                <rect key="frame" x="88" y="354" width="18" height="18"/>
+                                <rect key="frame" x="88" y="378" width="18" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Arrow" id="1NX-wy-FEa"/>
                             </imageView>
@@ -1050,6 +1050,6 @@
         <image name="NSRefreshTemplate" width="11" height="15"/>
         <image name="NSStopProgressTemplate" width="11" height="11"/>
         <image name="fog" width="128" height="128"/>
-        <image name="gradient" width="300" height="225"/>
+        <image name="gradient2" width="580" height="500"/>
     </resources>
 </document>
