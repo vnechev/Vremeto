@@ -56,6 +56,11 @@ class ViewController: NSViewController {
         geocoder.reverseGeocodeLocation(currentLocation) { (placemakers, error) in
             self.geoName(withPlacemakers: placemakers, error: error)
         }
+       
+    }
+    override func viewWillAppear() {
+        getCurrentData { }
+        getForecast { }
     }
     
     @objc func geoName(withPlacemakers placemarks: [CLPlacemark]?, error: Error?){
@@ -128,10 +133,10 @@ class ViewController: NSViewController {
             let currentDate = dateFormater.string(from: (result.response?.days?.points[0].time) ?? Date())
             self.dateLbl.stringValue = currentDate.capitalized
             
-            let test = (result.response?.current?.wind?.bearing?.degrees)! 
-            let test1 = result.response?.hours?.points[2].wind?.speed?.label // wind next hour
+            let test = (result.response?.current?.wind?.bearing?.degrees)!
+//            let test1 = result.response?.hours?.points[2].wind?.speed?.label // wind next hour
             self.arrowImg.frameCenterRotation = CGFloat(test + 90)
-            print(test1!)
+//            print(test1!)
         }
         
         complete()

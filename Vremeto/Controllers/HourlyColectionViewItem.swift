@@ -24,9 +24,10 @@ class HourlyColectionViewItem: NSCollectionViewItem {
         // Do view setup here.
         self.view.wantsLayer = true
         self.view.layer?.cornerRadius = 8
-        getForecastData(hour: 1 ){}
+//        getForecastData(hour: 1 ){}
     }
     
+   
     
     func getForecastData(hour: Int, complete: @escaping DownloadComplete) {
         SwiftSky.secret = API_KEY
