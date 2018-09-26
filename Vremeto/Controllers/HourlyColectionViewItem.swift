@@ -17,7 +17,7 @@ class HourlyColectionViewItem: NSCollectionViewItem {
     @IBOutlet weak var hourlyCurrentTempLbl: NSTextField!
     @IBOutlet weak var sumarryLabel: NSTextField!
     static var instance = HourlyColectionViewItem()
-    let hour : [Int] = [Int]()
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()

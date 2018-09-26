@@ -47,7 +47,7 @@ class ViewController: NSViewController {
     }
 
     @objc func imageClicked(){
-        performSegue(withIdentifier: NSStoryboardSegue.Identifier("showHourly"), sender: self)
+        performSegue(withIdentifier: "showHourly", sender: self)
     }
     
     override func viewDidAppear() {
@@ -71,7 +71,10 @@ class ViewController: NSViewController {
         } else {
             if let placemarks = placemarks, let placemark = placemarks.first {
                 currentLocationName.stringValue = placemark.locality!
-                streetNameLbl.stringValue = placemark.thoroughfare!
+               
+                if let street = placemark.country{
+                streetNameLbl.stringValue = street
+                }
             } else {
                 currentLocationName.stringValue = "N/A"
             }

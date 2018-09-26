@@ -68,8 +68,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, CLLocationManagerDelegate {
     
 
     @objc func popUpDisplay(_ sender: AnyObject?){
-        let storyboard = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: nil)
-        guard let vc = storyboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier("vc")) as? NSViewController else {return}
+        let storyboard = NSStoryboard(name: "Main", bundle: nil)
+        guard let vc = storyboard.instantiateController(withIdentifier: "vc") as? NSViewController else {return}
         let popoverView = NSPopover()
         popoverView.contentViewController = vc
         popoverView.behavior = .transient
